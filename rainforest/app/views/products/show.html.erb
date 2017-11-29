@@ -9,7 +9,8 @@
 <br>
 
 <h3><%@product.reviews.each_with_index do |r,i|%></h3>
-Comment <%= i+1 %>: <%= r.comment %> <%=r.created_at %><br><%= link_to("Edit", "/products/#{@product.id}/reviews/#{r.id}/edit") %> 
+Comment <%= i+1 %>: <%= r.comment %> <br> Created at <%=r.created_at %><br>Last Edited at <%= r.updated_at %><br><%= link_to("Edit", "/products/#{@product.id}/reviews/#{r.id}/edit") %>
+<br>
 <br>
 <% end %>
 

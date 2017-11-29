@@ -1,5 +1,5 @@
 <%= render 'form', product: @review.product, review: @review %>
 
 <% if @review.errors.any? == false %>
-<%= link_to("Delete", "/products/#{@product.id}/reviews/#{@review.id}", method: :delete, data: {confirm: "Are you sure you want to delete this product?"})%>
+<%= link_to("Delete Review", "/products/#{@product.id}/reviews/#{@review.id}", method: :delete, data: {confirm: "Are you sure you want to delete this product?"})%>
 <%end %>
