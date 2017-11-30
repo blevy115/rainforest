@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   has_many :reviews
-
+  belongs_to :user
   validates :name, :description, :price_in_cents, presence: true
   validates :price_in_cents, numericality: {only_integer: true, greater_than_or_equal_to: 0}
 
